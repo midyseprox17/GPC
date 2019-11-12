@@ -49,15 +49,15 @@ void keyboard(unsigned char key, int x, int y) {
 
 void specialkeys(int key, int x, int y) {
  switch (key) {
- case GLUT_KEY_LEFT:
-  RotationSpeedX -= 0.1;
-  if (RotationSpeedX <= -2.0)
-   RotationSpeedX = -2.0;
-  break;
  case GLUT_KEY_RIGHT:
-  RotationSpeedX += 0.1;
-  if (RotationSpeedX >= 1.5)
-   RotationSpeedX = 1.5;
+  RotationSpeedX -= 0.02;
+  if (RotationSpeedX <= -0.1)
+   RotationSpeedX = -0.1;
+  break;
+ case GLUT_KEY_LEFT:
+  RotationSpeedX += 0.02;
+  if (RotationSpeedX >= 0.1)
+   RotationSpeedX = 0.1;
   break;
  case GLUT_KEY_UP:
   zCord += 0.2;
@@ -69,12 +69,12 @@ void specialkeys(int key, int x, int y) {
   if (zCord <= -60.0)
    zCord = -60.0;
   break;
- case GLUT_KEY_PAGE_UP:
+ case GLUT_KEY_PAGE_DOWN:
   yCord += 0.1f;
   if (yCord >= 15.0)
    yCord = 15.0;
   break;
- case GLUT_KEY_PAGE_DOWN:
+ case GLUT_KEY_PAGE_UP:
   yCord -= 0.1;
   if (yCord <= -15.0)
    yCord = -15.0;
@@ -105,6 +105,7 @@ void specialkeys(int key, int x, int y) {
  }
  glutPostRedisplay();
 }
+
 void sumbu(void) {
  glColor3f(1.0, 0.0, 0.0);
  glBegin(GL_LINES);
@@ -140,62 +141,6 @@ static void display(void) {
  glPushMatrix();
  sumbu();
  glPopMatrix();
- // Tembok
- //     Tembok kiri 
-
-//
-// glPushMatrix();
-// glTranslated(8.0, -3.0, 0.2);
-// glScaled(16.0, 1.0, 0.5);
-// glColor3d(1.0, 1.0, 1.0);
-// glutSolidCube(1);
-// glPopMatrix();
-//
-// glPushMatrix();
-// glTranslated(8.0, 3.0, 0.2);
-// glScaled(16.0, 13.0, 0.5);
-// glColor3d(1.0, 0.0, 0.0);
-// glutSolidCube(1);
-// glPopMatrix();
- //     Tembok kanan 
-
-//
-// glPushMatrix();
-// glTranslated(23.5, -3.0, 0.2);
-// glScaled(2.9, 1.0, 0.5);
-// glColor3d(1.0, 1.0, 1.0);
-// glutSolidCube(1);
-// glPopMatrix();
-//
-// glPushMatrix();
-// glTranslated(23.5, 3.0, 0.2);
-// glScaled(2.9, 13.0, 0.5);
-// glColor3d(1.0, 0.0, 0.0);
-// glutSolidCube(1);
-// glPopMatrix();
-
- //    Atas Pintu
-// glPushMatrix();
-// glTranslated(19, 9.0, 0.2);
-// glScaled(6.1, 1.0, 0.5);
-// glColor3d(1.0, 0.0, 0.0);
-// glutSolidCube(1);
-// glPopMatrix();
-//
-//
-// glPushMatrix();
-// glTranslated(0.0, 3.0, 11.0);
-// glScaled(0.5,13.0,22.0);
-// glColor3d(1.0, 0.0, 0.0);
-// glutSolidCube(1);
-// glPopMatrix();
-//
-// glPushMatrix();
-// glTranslated(0.0, -3.0, 11.0);
-// glScaled(0.6, 1.0, 22.1);
-// glColor3d(1.0, 1.0, 1.0);
-// glutSolidCube(1);
-// glPopMatrix();
 
 //Pondasi lantai
  glPushMatrix();
@@ -318,6 +263,7 @@ static void display(void) {
  glColor3d(1, 1, 1);
  glutSolidSphere(1,slices,stacks);  
  glPopMatrix();
+
 
  //bingkai pintu utama 1
  glPushMatrix();
