@@ -295,6 +295,30 @@ static void display(void) {
  glutSolidCube(1);
  glPopMatrix();
  
+ //Keset
+ glPushMatrix();
+ glTranslated(-22.0, 0.6, -10.0);
+ glScaled(3.5, 0.2, 5.0);
+ glColor3d(0.0, 0.0, 0.0);
+ glutSolidCube(1);
+ glPopMatrix();
+
+//Mesin Cuci
+ glPushMatrix();
+ glTranslated(-27.0, 3.5, 13.0);
+ glScaled(4.0, 6.0, 4.0);
+ glColor3d(0.686, 0.933, 0.93);
+ glutSolidCube(1);
+ glPopMatrix();
+
+//bulat mesin cuci
+ glPushMatrix();
+ glTranslated(-25.5, 3.5, 13.0);
+ glScaled(1.0, 2.0, 2.0);
+ glColor3d(1, 1, 1);
+ glutSolidSphere(1,slices,stacks);  
+ glPopMatrix();
+
  //bingkai pintu utama 1
  glPushMatrix();
  glTranslated(-25.0, 6.0, -7.6);
