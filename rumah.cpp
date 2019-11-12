@@ -219,7 +219,7 @@ static void display(void) {
  glPushMatrix();
  glTranslated(-29.5, 7.5, 4.5);
  glScaled(1.0, 14.0, 21.0);
- glColor3d(207, 217, 227);
+ glColor3d(1.0, 1.0, 0.0);
  glutSolidCube(1);
  glPopMatrix();
 
@@ -273,9 +273,41 @@ static void display(void) {
  
  //tembok 8 sumbu z
  glPushMatrix();
- glTranslated(-25.0, 13.0, -10.5);
- glScaled(1.0, 3.0, 6.0);
+ glTranslated(10.0, 7.5, -12.0);
+ glScaled(1.0, 14.0, 6.0);
  glColor3d(1.0, 1.0, 0.0);
+ glutSolidCube(1);
+ glPopMatrix();
+ 
+ //tembok 9 sumbu x
+ glPushMatrix();
+ glTranslated(19.5, 3.5, -3.5);
+ glScaled(20.0, 6.0, 1.0);
+ glColor3d(1.0, 1.0, 0.0);
+ glutSolidCube(1);
+ glPopMatrix(); 
+ 
+ //tembok 10 sumbu z
+ glPushMatrix();
+ glTranslated(10.0, 3.5, 3.5);
+ glScaled(1.0, 6.0, 13.0);
+ glColor3d(1.0, 1.0, 0.0);
+ glutSolidCube(1);
+ glPopMatrix();
+ 
+ //bingkai pintu utama 1
+ glPushMatrix();
+ glTranslated(-25.0, 6.0, -7.6);
+ glScaled(1.0, 11.0, 0.2);
+ glColor3d(1.0, 0.4, 0.0);
+ glutSolidCube(1);
+ glPopMatrix(); 
+ 
+ //bingkai pintu utama 2
+ glPushMatrix();
+ glTranslated(-25.0, 11.4, -10.4);
+ glScaled(1.0, 0.2, 5.4);
+ glColor3d(1.0, 0.4, 0.0);
  glutSolidCube(1);
  glPopMatrix();
   
